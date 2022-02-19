@@ -1,0 +1,76 @@
+﻿@using ozal.webui.ViewModels
+@model ProCareHome
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="/css/x.css"/>
+
+<div class="p-5 d-flex justify-content-center flex-wrap mb-4">
+    <h2>Servisteki cihazınızın durumunu kontrol etmek ister misiniz?</h2>
+    <div class="col-md-4 mt-4">
+        <form action="/Home/CheckRepair" method="get">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control input-text" placeholder="Check your repair...." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <input class="btn btn-outline-warning btn-lg" type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="p-4">
+    <h2 class="text-center mb-4">Popüler Cihazlar</h2>
+    <div class="row flex-nowrap" style="overflow-x: scroll;" >
+        @foreach (var item in Model.HomeProducts)
+        {
+            <div id="x" style="width: auto;">
+                <div class="card">
+                    <div class="imgBox">
+                        <img src="~/img/@item.Imageurl" alt="mouse corsair" class="mouse">
+                    </div>
+
+                    <div class="contentBox">
+                        <h3>@item.Name</h3>
+                        <h2 class="price">@item.Price TRY</h2>
+                        @Html.ActionLink("Incele", "Details","Products",new {id = item.Id}, new { @class = "buy" })
+                        @if (User.IsInRole("Admin") || User.IsInRole("Root"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="buy">Edit</a> 
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="buy">Delete</a> 
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="p-4">
+    <h2 class="text-center mb-4">Popüler Bakım ve Onarımlar</h2>
+    <div class="row flex-nowrap" style="overflow-x: scroll;" >
+        @foreach (var item in Model.HomeCares)
+        {
+            <div id="x" style="width: auto;">
+                <div class="card">
+                    <div class="imgBox">
+                        <img src="~/img/@item.Imageurl" alt="mouse corsair" class="mouse">
+                    </div>
+
+                    <div class="contentBox">
+                        <h3>@item.Name</h3>
+                        <h2 class="price">@item.Price TRY</h2>
+                        @Html.ActionLink("Incele", "Details","Products",new {id = item.Id}, new { @class = "buy" })
+                        @if (User.IsInRole("Admin") || User.IsInRole("Root"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="buy">Edit</a> 
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="buy">Delete</a> 
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

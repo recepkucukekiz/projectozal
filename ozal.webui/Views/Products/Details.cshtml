@@ -1,0 +1,44 @@
+﻿@model ozal.entity.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<a asp-action="Index">Back to List</a>
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <img class="w-100" src="https://images.samsung.com/is/image/samsung/p6pim/my/sm-g996bzvdxme/gallery/my-galaxy-s21-5g-g996-371045-sm-g996bzvdxme-392276588" alt="">
+    </div>
+    <div class="col-lg-6">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        @if (User.IsInRole("Admin") || User.IsInRole("Root"))
+        {
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Ishome)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Ishome)
+            </dd>
+            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+        }
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </div>
+</div>

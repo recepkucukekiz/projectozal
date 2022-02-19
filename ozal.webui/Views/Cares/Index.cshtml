@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ozal.entity.Care>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="p-5 d-flex justify-content-center flex-wrap mb-4">
+    <h1 class="w-100 text-center">Ekranınız mı kırıldı? Hemen sorunuzu arayın.</h1>
+    <div class="col-md-4 mt-4">
+        <form action="/Cares/Search" method="get">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control input-text" placeholder="Search products...." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <input class="btn btn-outline-warning btn-lg" type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<p>
+    @if (User.IsInRole("Admin") || User.IsInRole("Root"))
+    {
+        <a asp-action="Create">Create New</a>
+    }
+</p>
+
+@await Html.PartialAsync("_Card");
+

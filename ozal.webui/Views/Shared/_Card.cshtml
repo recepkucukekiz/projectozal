@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" href="/css/x.css"/>
+<div class="row flex-nowrap" style="overflow-x: scroll;">
+    @foreach (var item in Model)
+    {
+        <div id="x" style="width: auto;">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="~/img/@item.Imageurl" alt="mouse corsair" class="mouse">
+                </div>
+
+                <div class="contentBox">
+                    <h3>@item.Name</h3>
+                    <h2 class="price">@item.Price TRY</h2>
+                    @Html.ActionLink("Incele", "Details","Products",new {id = item.Id}, new { @class = "buy" })
+                    @if (User.IsInRole("Admin") || User.IsInRole("Root"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="buy">Edit</a> 
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="buy">Delete</a> 
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

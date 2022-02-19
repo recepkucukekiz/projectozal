@@ -1,0 +1,17 @@
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.data.deps.json
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.data.runtimeconfig.json
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.data.dll
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ref\ozal.data.dll
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.data.pdb
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.entity.dll
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\bin\Debug\net6.0\ozal.entity.pdb
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.csproj.AssemblyReference.cache
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.AssemblyInfoInputs.cache
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.AssemblyInfo.cs
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.csproj.CoreCompileInputs.cache
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.csproj.CopyComplete
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.dll
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ref\ozal.data.dll
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.pdb
+C:\Users\recep\Desktop\projectozal\ozal\ozal.data\obj\Debug\net6.0\ozal.data.genruntimeconfig.cache

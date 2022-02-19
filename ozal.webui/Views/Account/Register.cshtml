@@ -1,0 +1,230 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+@model RegisterModel
+
+<h1 class="h3">Register</h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-controller="Account" asp-action="Register" method="POST">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="FirstName">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group row">
+            <label asp-for="LastName" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="LastName">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+       <div class="form-group row">
+            <label asp-for="UserName" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="UserName">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group row">
+            <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group row">
+            <label asp-for="RePassword" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="RePassword">
+                <span asp-validation-for="RePassword" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group row">
+            <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>   
+
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="box bg-img">
+        <div class="content">
+            <h2>Register</h2>
+            <form asp-controller="Account" asp-action="Register" method="POST" class="forms">
+                <div class="user-input">
+                    <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+                    <input class="form-control login-input" asp-for="FirstName">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <label asp-for="LastName" class="col-sm-2 col-form-label"></label>
+                <div class="user-input">
+                    <input class="form-control login-input" asp-for="LastName">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="user-input">
+                    <input class="form-control login-input" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="user-input">
+                    <input class="form-control login-input" asp-for="UserName">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="pass-input">
+                    <input class="form-control login-input" asp-for="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="pass-input">
+                    <input class="form-control login-input" asp-for="RePassword">
+                    <span asp-validation-for="RePassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+                <p class="new-account" style="color: white;">You have already account <a href="/Account/Register">Log in now!</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .box {
+    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-img {
+    background-position: center;
+    background-size: cover;
+    }
+
+    .content {
+    text-align: center;
+    }
+
+    .content h2 {
+    padding: 15px 0px 15px;
+    font-size: 2em;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    }
+
+    .user-input {
+    position: relative;
+    }
+
+    .user-input i {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    padding: 9px 8px;
+    color: #848484;
+    transition: 0.3s;
+    }
+
+    .pass-input {
+    position: relative;
+    }
+
+    .pass-input i {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    padding: 9px 8px;
+    color: #848484;
+    transition: 0.3s;
+    }
+
+    .login-input {
+    color: white;
+    border-radius: 2px;
+    height: 44px;
+    border: none;
+    padding: 15px 20px;
+    background-color: rgba(65, 65, 65, 0.5);
+    margin-bottom: 24px;
+    }
+
+    .login-input:focus {
+    outline: none;
+    border-bottom: 2px solid #06ff8c;
+    }
+
+    .login-input:focus:invalid {
+    border-bottom: 2px solid #ffce00;
+    }
+
+    .login-btn {
+    font-size: 16px;
+    font-weight: 700;
+    width: 240px;
+    border-radius: 44px;
+    padding: 12px;
+    background-color: #ffce00;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 32px;
+    }
+
+    span {
+    color: #ffce00;
+    }
+
+    .new-account a {
+    color: #c6a109;
+    font-weight: 400;
+    }
+
+    .f-pass a {
+    color: #626262;
+    text-decoration: none;
+    }
+
+    #hide-1 {
+    display: none;
+    }
+
+    .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .logo-img {
+    position: relative;
+    width: 78px;
+    height: auto;
+    }
+</style>
+
+<script src="https://kit.fontawesome.com/c0078485ae.js" crossorigin="anonymous"></script>
+
+<script src="/modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
